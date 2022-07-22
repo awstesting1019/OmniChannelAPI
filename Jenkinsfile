@@ -4,6 +4,8 @@ pipeline {
   environment {
     //adding a comment for the commit test
     DEPLOY_CREDS = credentials('anypointcredentials')
+    DEPLOY_CREDS_USR = 'awstesting1019A'
+    DEPLOY_CREDS_PSW = 'Dallas2022@'
     MULE_VERSION = '4.4.0'
     BG = 'VST'
     WORKER = 'Micro'
