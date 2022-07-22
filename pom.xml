@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0-20220221</app.runtime>
-		<mule.maven.plugin.version>3.5.4</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.5.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -32,7 +32,7 @@
 				<configuration>
 					<cloudHubDeployment>
     		    				<uri>https://anypoint.mulesoft.com</uri>
-   						<muleVersion>${mule.version}</muleVersion>
+   						<muleVersion>${app.runtime}</muleVersion>
     						<!-- Deploy User Parameter -->
     						<username>awstesting1019A</username>
     						<password>Dallas2022@</password>
