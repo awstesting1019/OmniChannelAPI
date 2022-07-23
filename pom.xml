@@ -32,10 +32,10 @@
 				<configuration>
 					<cloudHubDeployment>
     		    				<uri>https://anypoint.mulesoft.com</uri>
-   						<muleVersion>${app.runtime}</muleVersion>
+   						<muleVersion>${mule.version}</muleVersion>
     						<!-- Deploy User Parameter -->
-    						<username>awstesting1019A</username>
-    						<password>Dallas2022@</password>
+     						<username>${anypoint.username}</username>
+   						<password>${anypoint.password}</password>
     						<!-- Environment Parameter -->
     						<environment>${cloudhub.environment}</environment>
     						<applicationName>${cloudhub.app}</applicationName>
