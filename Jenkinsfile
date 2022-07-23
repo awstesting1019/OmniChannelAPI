@@ -4,8 +4,6 @@ pipeline {
   environment {
     //adding a comment for the commit test
     DEPLOY_CREDS = credentials('anypointcredentials')
-    DEPLOY_CREDS_USR = 'awstesting1019A'
-    DEPLOY_CREDS_PSW = 'Dallas2022@'
     MULE_VERSION = '4.4.0'
     BG = 'VST'
     WORKER = 'Micro'
@@ -31,7 +29,7 @@ pipeline {
         APP_NAME = 'omni-channel-api-v1'
       }
       steps {
-            sh 'mvn -U -V -e -B -gs /var/lib/jenkins/workspace/settings.xml -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
+            sh 'mvn -U -V -e -B -gs /var/lib/jenkins/workspace/settings.xml -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS%" -Danypoint.password="%DEPLOY_CREDS%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
       }
     }
     stage('Deploy Production') {
@@ -40,7 +38,7 @@ pipeline {
         APP_NAME = 'omni-channel-api-v1'
       }
       steps {
-            sh 'mvn -U -V -e -B -gs /var/lib/jenkins/workspace/settings.xml -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS_USR%" -Danypoint.password="%DEPLOY_CREDS_PSW%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
+            sh 'mvn -U -V -e -B -gs /var/lib/jenkins/workspace/settings.xml -DskipTests deploy -DmuleDeploy -Dmule.version="%MULE_VERSION%" -Danypoint.username="%DEPLOY_CREDS%" -Danypoint.password="%DEPLOY_CREDS%" -Dcloudhub.app="%APP_NAME%" -Dcloudhub.environment="%ENVIRONMENT%" -Dcloudhub.bg="%BG%" -Dcloudhub.worker="%WORKER%"'
       }
     }
   }
