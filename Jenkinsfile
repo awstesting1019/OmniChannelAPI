@@ -3,7 +3,7 @@ pipeline {
   agent any
   environment {
     //adding a comment for the commit test
-    DEPLOY_CREDS = credentials('anypointcredentials')
+    DEPLOY_CREDS = credentials('anypoint.credentials')
     MULE_VERSION = '4.4.0'
     BG = 'VST'
     WORKER = 'Micro'
