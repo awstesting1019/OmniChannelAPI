@@ -43,6 +43,12 @@
     						<workerType>${cloudhub.worker}</workerType>
     						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
+					<properties>
+    						<!-- API MANAGER -->
+    						<anypoint.platform.base_uri>https://anypoint.mulesoft.com/</anypoint.platform.base_uri>
+    						<anypoint.platform.client_id>${env.ANYPOINT_CLIENT_ID}</anypoint.platform.client_id>
+    						<anypoint.platform.client_secret>${env.ANYPOINT_CLIENT_SECRET}</anypoint.platform.client_secret>
+					</properties>
 				</configuration>
 			</plugin>
 		</plugins>
