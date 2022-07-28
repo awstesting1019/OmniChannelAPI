@@ -5,7 +5,7 @@ pipeline {
     //adding a comment for the commit test
     DEPLOY_CREDS = credentials('anypoint.credentials')
     MULE_VERSION = '4.4.0'
-    BG = 'VST'
+    BG = '62247c48-fb85-4268-a41f-780033385d51'
     WORKER = 'Micro'
     M2SETTINGS = '/var/lib/jenkins/workspace/settings.xml'
     
